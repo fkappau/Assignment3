@@ -1,0 +1,37 @@
+.Maindiv{
+    background-color: rgb(138, 6, 127);
+    height: 100vh;
+}
+
+button{
+    margin: 10px 20px;
+    font-weight: 900;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: rgb(6, 241, 77);
+    padding: 10px 20px; 
+    align-items: flex-start; 
+    justify-items: left;
+  }
+  .Navbar{
+    display: flex;
+    background-color: rgb(14, 11, 216);
+    flex-direction: row; 
+    align-content: space-between;
+  }
+
+  nav{
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: 900;
+    display: flex;
+    
+  }
+  .selection{
+    padding: 10px;
+    color: pink;
+    background-color: rgb(14, 11, 216);
+    border-radius: 10px;
+  }
