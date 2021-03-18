@@ -1,9 +1,9 @@
-.Maindiv{
+/* .Maindiv{
     background-color: rgb(138, 6, 127);
     height: 100vh;
-}
+} */
 
-button{
+/* button{
     margin: 10px 20px;
     font-weight: 900;
     border-radius: 5px;
@@ -13,8 +13,8 @@ button{
     padding: 10px 20px; 
     align-items: flex-start; 
     justify-items: left;
-  }
-  .Navbar{
+  } */
+  /* .Navbar{
     display: flex;
     background-color: rgb(14, 11, 216);
     flex-direction: row; 
@@ -34,4 +34,4 @@ button{
     color: pink;
     background-color: rgb(14, 11, 216);
     border-radius: 10px;
-  }
+  } */
