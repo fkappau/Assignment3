@@ -1,19 +1,33 @@
 import './Login.css'
-import React, { useState } from 'react'
+import {useAppContext} from './context/context'
 import mypic from './images/emoji.png'
+import {useState} from 'react'
+
 function Form(){
- 
+    
+    const {Brandnam,goTo,} = useAppContext();
+    function goToSign () {
+        goTo('/signup')
+    }
+    const [values,setValues] = useState();
+    function update(e){
+        setValues({...values,[e.target.name] : e.target.value})
+        console.log(update)
+    }
+    
+
     return(
         
             
-    <div className="maincontainer">
+    <form className="maincontainer">
 
         
         <div className="formcontainer">
 
             
             <div className="headerdiv">
-                <h1>KENTEGUY</h1>
+                
+                <h1>{Brandnam}</h1>
             </div>
 
             
@@ -27,20 +41,20 @@ function Form(){
             <div className="inputdiv">
 
                 
-                <input id="username" type="name" placeholder="Username" class="myinputfields"/>
+                <input  name="username" id="username" type="name" placeholder="Username" class="myinputfields" onChange={update}/>
 
-                 <input id="email" type="Email" placeholder="Email" class="myinputfields"/>
+                 <input name="mail" id="email" type="Email" placeholder="Email" class="myinputfields"onChange={update}/>
                 
-                <input id="password" type="password" placeholder="Password" class="myinputfields"/>
+                <input name="pass" id="password" type="password" placeholder="Password" class="myinputfields"onChange={update}/>
 
-                <input id="passworde" type="password" placeholder="confirmPassword" class="myinputfields"/>
+                <input name="cpass" id="passworde" type="password" placeholder="confirmPassword" class="myinputfields"onChange={update}/>
 
             </div>
 
 
-            
+                
             <div className="buttondiv">
-                <button id="button">Login</button>
+                <button id="button" onClick={goToSign} >Login</button>
                 <button id="buttone">Cancel</button>
             </div>
 
@@ -50,7 +64,7 @@ function Form(){
             </div>
         </div>
 
-    </div>
+    </form>
             
 
     )

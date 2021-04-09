@@ -1,12 +1,22 @@
+import { Route, Switch } from 'react-router-dom'
 import './App.css';
-// import Home from './Components/Home/Home'
 import Login from './Components/Home/Login/Login'
+import Signup from './Components/Home/Login/SignUp/Signup'
+import {AppProvider} from './Components/Home/Login/context/context'
 function App() {
   return (
-    <div className="App">
-      
-      <Login/>
-    </div>
+   
+
+     <AppProvider>
+
+       <Switch>
+         <Route exact path="/" component={Login}/>
+         
+         <Route exact path="/signup" component={Signup} />
+       </Switch>
+       
+     </AppProvider>
+     
   );
 }
 
